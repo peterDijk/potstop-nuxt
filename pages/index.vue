@@ -2,6 +2,7 @@
   <div class="container">
     <div>
       <Logo />
+      <Header :header_data="header_data" />
       <h1 class="title">potstop</h1>
     </div>
   </div>
