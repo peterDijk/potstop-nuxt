@@ -57,7 +57,14 @@ export default {
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
+    '@nuxtjs/prismic',
   ],
+  // This is where you configure your settings for the new plugin
+  prismic: {
+    endpoint: 'https://potstop.cdn.prismic.io/api/v2',
+    linkResolver: '@/plugins/link-resolver',
+    htmlSerializer: '@/plugins/html-serializer',
+  },
   /*
    ** Axios module configuration
    ** See https://axios.nuxtjs.org/options
@@ -68,4 +75,4 @@ export default {
    ** See https://nuxtjs.org/api/configuration-build/
    */
   build: {},
-}
+};

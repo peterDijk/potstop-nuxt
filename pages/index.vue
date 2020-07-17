@@ -2,35 +2,24 @@
   <div class="container">
     <div>
       <Logo />
-      <h1 class="title">
-        potstop
-      </h1>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--grey"
-        >
-          GitHub
-        </a>
-      </div>
+      <h1 class="title">potstop</h1>
     </div>
   </div>
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
-
-export default Vue.extend({})
+export default {
+  async asyncData({ $prismic, error }) {
+    try {
+      const header = (await $prismic.api.getSingle('header')).data;
+      return {
+        header_data: header,
+      };
+    } catch (e) {
+      error({ statusCode: 404, message: 'Page not found' });
+    }
+  },
+};
 </script>
 
 <style>
