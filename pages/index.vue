@@ -1,26 +1,26 @@
 <template>
-  <div class="container">
+  <div>
     <div>
-      <Logo />
+      <!-- <Logo /> -->
       <Header :header_data="header_data" />
-      <h1 class="title">potstop</h1>
     </div>
   </div>
 </template>
 
 <script lang="ts">
 export default {
-  async asyncData({ $prismic, error }) {
+  async asyncData ({ $prismic, error }) {
     try {
-      const header = (await $prismic.api.getSingle('header')).data;
+      const header = (await $prismic.api.getSingle('header')).data
+      console.log({ header })
       return {
-        header_data: header,
-      };
+        header_data: header
+      }
     } catch (e) {
-      error({ statusCode: 404, message: 'Page not found' });
+      error({ statusCode: 404, message: 'Page not found' })
     }
-  },
-};
+  }
+}
 </script>
 
 <style>
