@@ -1,5 +1,5 @@
 <template>
-  <div class="w-screen h-screen bg-green-100">
+  <div class="w-screen h-screen bg-white">
     <img :src="header_data['header-image'].url" class=" object-cover w-full absolute" />
     <div
       class="container mx-auto h-full relative flex items-center justify-center"
