@@ -25,11 +25,11 @@ export default {
 </script>
 
 <style>
-/* @tailwind base;
+@tailwind base;
 
 @tailwind components;
 
-@tailwind utilities; */
+@tailwind utilities;
 
 .title {
   font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,

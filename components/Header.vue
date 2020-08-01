@@ -1,12 +1,14 @@
 <template>
   <div class="w-screen h-screen bg-green-100">
-    <img :src="header_data['header-image'].url" class=" object-cover h-full absolute" />
+    <img :src="header_data['header-image'].url" class=" object-cover w-full absolute" />
     <div
       class="container mx-auto h-full relative flex items-center justify-center"
     >
-      <div class="text-green-100 z-auto m-auto p-6 sm:h-12 md:h-16 lg:h-20 xl:h-24 ">
-        <h1 class="">{{ header_data['header-title'][0].text }}</h1>
-        <h1 class="NuxtLogo title">
+      <div class="flex-col text-white text-4xl p-6">
+        <h1 class="">
+          {{ header_data['header-title'][0].text }}
+        </h1>
+        <h1 class="NuxtLogo text-7xl tracking-widest text-center">
           potstop
         </h1>
       </div>
@@ -35,11 +37,17 @@ export default {
 .title {
   font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
     'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
+
+  /* display: block; */
+
+  /* font-weight: 300;
+
+  font-size: 100px; */
+
   color: #fff;
-  letter-spacing: 1px;
+
+  /* letter-spacing: 1px; */
+
 }
 
 .NuxtLogo {
