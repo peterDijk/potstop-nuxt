@@ -3,6 +3,11 @@
     <div>
       <!-- <Logo /> -->
       <Header :header_data="header_data" />
+      <div
+        class="container mx-auto relative flex justify-center overflow-scroll"
+      >
+        <!-- Contenttt -->
+      </div>
       <!-- <TestTailwind /> -->
     </div>
   </div>
@@ -10,18 +15,18 @@
 
 <script lang="ts">
 export default {
-  async asyncData ({ $prismic, error }) {
+  async asyncData({ $prismic, error }) {
     try {
-      const header = (await $prismic.api.getSingle('header')).data
-      console.log({ header })
+      const header = (await $prismic.api.getSingle('header')).data;
+      console.log({ header });
       return {
-        header_data: header
-      }
+        header_data: header,
+      };
     } catch (e) {
-      error({ statusCode: 404, message: 'Page not found' })
+      error({ statusCode: 404, message: 'Page not found' });
     }
-  }
-}
+  },
+};
 </script>
 
 <style>
