@@ -1,16 +1,23 @@
 <template>
-  <div class="w-screen h-screen bg-white">
-    <img :src="header_data['header-image'].url" class=" object-cover w-full absolute" />
-    <div
-      class="container mx-auto h-full relative flex items-center justify-center"
-    >
-      <div class="flex-col text-white text-4xl p-6">
-        <h1 class="">
-          {{ header_data['header-title'][0].text }}
-        </h1>
-        <h1 class="NuxtLogo text-7xl tracking-widest text-center">
-          potstop
-        </h1>
+  <div class="relative">
+    <div class="w-screen h-screen bg-white overflow-hidden absolute">
+      <img
+        :src="header_data['header-image'].url"
+        class="object-cover h-full w-full absolute"
+      />
+      <div
+        class="container mx-auto h-full relative flex items-center justify-center overflow-scroll"
+      >
+        <div class="pt-56 p-6 ">
+          <div class="bg-green-600">
+            <h1 class="NuxtLogo tracking-widest text-center text-white sm:text-4xl md:text-8xl lg:text-9xl xl:text-9xl">
+              potstop
+            </h1>
+          </div>
+          <h1 class="text-4xl text-green-300">
+            {{ header_data['header-title'][0].text }}
+          </h1>
+        </div>
       </div>
     </div>
   </div>
@@ -47,7 +54,6 @@ export default {
   color: #fff;
 
   /* letter-spacing: 1px; */
-
 }
 
 .NuxtLogo {
