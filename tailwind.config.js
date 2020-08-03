@@ -6,6 +6,19 @@
  */
 module.exports = {
   theme: {
+    fontFamily: {
+      sans: [
+        'Quicksand',
+        'Source Sans Pro',
+        '-apple-system',
+        'BlinkMacSystemFont',
+        'Segoe UI',
+        'Roboto',
+        'Helvetica Neue',
+        'Arial',
+        'sans-serif',
+      ],
+    },
     fontSize: {
       xs: '.75rem',
       sm: '.875rem',
@@ -20,8 +33,8 @@ module.exports = {
       '6xl': '4rem',
       '7xl': '5rem',
       '8xl': '6rem',
-      '9xl': '7rem'
-    }
+      '9xl': '7rem',
+    },
   },
   variants: {},
   plugins: [],
@@ -33,7 +46,7 @@ module.exports = {
       'layouts/**/*.vue',
       'pages/**/*.vue',
       'plugins/**/*.js',
-      'nuxt.config.js'
-    ]
-  }
-}
+      'nuxt.config.js',
+    ],
+  },
+};

@@ -1,61 +1,33 @@
 <template>
-  <div class="relative">
-    <div class="w-screen h-screen bg-white overflow-hidden absolute">
-      <img
-        :src="header_data['header-image'].url"
-        class="object-cover h-full w-full absolute"
-      />
-      <div
-        class="container mx-auto h-full relative flex items-center justify-center overflow-scroll"
-      >
-        <div class="pt-56 p-6 ">
-          <div class="bg-green-600">
-            <h1 class="NuxtLogo tracking-widest text-center text-white sm:text-4xl md:text-8xl lg:text-9xl xl:text-9xl">
-              potstop
-            </h1>
-          </div>
-          <h1 class="text-4xl text-green-300">
-            {{ header_data['header-title'][0].text }}
-          </h1>
-        </div>
+    <div id='header-text' class="p-6 pt-64">
+      <div class="">
+        <h1
+          class="NuxtLogo tracking-widest pl-1 sm:pl-5 md:pl-16 lg:pl-32 xl:pl-32 text-6xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-9xl text-green-600"
+        >{{ headerData['header-main-title'][0].text }}</h1>
+        <h1
+          class="text-xl sm:text-1xl md:text-2xl lg:text-3xl xl:text-4xl tracking-widest text-white pl-6 p-3 inline"
+        >{{ headerData['header-title'][0].text }}</h1>
       </div>
     </div>
-  </div>
 </template>
 
 <script lang="ts">
+interface HeaderData {
+  'header-main-title': unknown;
+  'header-title': unknown;
+}
+
 export default {
-  props: ['header_data']
-  // async asyncData ({ $prismic, error }) {
-  //   try {
-  //     const header = (await $prismic.api.getSingle('header')).data
-  //     console.log({ header })
-  //     return {
-  //       header_data: header
-  //     }
-  //   } catch (e) {
-  //     error({ statusCode: 404, message: 'Page not found' })
-  //   }
-  // }
+  props: {
+    headerData: {
+      type: Object,
+      required: true,
+    }
+  }
 }
 </script>
 
 <style scoped>
-.title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-
-  /* display: block; */
-
-  /* font-weight: 300;
-
-  font-size: 100px; */
-
-  color: #fff;
-
-  /* letter-spacing: 1px; */
-}
-
 .NuxtLogo {
   animation: 1s appear;
   margin: auto;

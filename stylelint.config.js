@@ -6,10 +6,10 @@ module.exports = {
     'at-rule-no-unknown': [
       true,
       {
-        ignoreAtRules: ['extends', 'tailwind']
-      }
+        ignoreAtRules: ['extends', 'tailwind'],
+      },
     ],
     'block-no-empty': null,
-    'unit-whitelist': ['em', 'rem', 's', 'px', '%']
-  }
-}
+    'unit-whitelist': ['em', 'rem', 's', 'px', '%'],
+  },
+};

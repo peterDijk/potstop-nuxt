@@ -1,17 +1,23 @@
 module.exports = {
   root: true,
+  parser: 'vue-eslint-parser',
+  parserOptions: {
+    parser: '@typescript-eslint/parser',
+  },
   env: {
     browser: true,
-    node: true
+    node: true,
   },
+
   extends: [
-    '@nuxtjs/eslint-config-typescript'
-    // 'prettier',
-    // 'prettier/vue',
+    '@nuxtjs/eslint-config-typescript',
+    // 'plugin:@typescript-eslint/recommended',
+    'prettier',
     // 'plugin:prettier/recommended',
-    // 'plugin:nuxt/recommended',
+    'prettier/vue',
+    'plugin:nuxt/recommended',
   ],
-  // plugins: ['prettier'],
+  plugins: ['prettier', 'vue'],
   // add your custom rules here
   rules: {
     // 'vue/v-bind-style': ['longform'],
@@ -21,11 +27,12 @@ module.exports = {
         html: {
           void: 'always',
           normal: 'always',
-          component: 'always'
+          component: 'always',
         },
         svg: 'always',
-        math: 'always'
-      }
-    ]
-  }
-}
+        math: 'always',
+      },
+    ],
+    'vue/attribute-hyphenation': 'off',
+  },
+};
