@@ -1,5 +1,7 @@
 <template>
-    <div id='header-text' class="p-6 pt-64">
+  <div id='header-text'>
+    <div class="pt-48" />
+    <div class="p-6 pt-64">
       <div class="">
         <h1
           class="NuxtLogo tracking-widest pl-1 sm:pl-5 md:pl-16 lg:pl-32 xl:pl-32 text-6xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-9xl text-green-600"
@@ -9,14 +11,10 @@
         >{{ headerData['header-title'][0].text }}</h1>
       </div>
     </div>
+    </div>
 </template>
 
 <script lang="ts">
-interface HeaderData {
-  'header-main-title': unknown;
-  'header-title': unknown;
-}
-
 export default {
   props: {
     headerData: {
