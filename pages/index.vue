@@ -1,14 +1,14 @@
 <template>
   <div class="w-screen h-screen bg-white overflow-hidden absolute">
     <img
-      :src="header_data['header-image'].url"
+      :src="headerData['header-image'].url"
       class="object-cover h-full w-full absolute"
     />
     <div
       class="container mx-auto h-full relative flex-row justify-center overflow-scroll"
     >
-      <Header :header_data="header_data" />
-      <Content />
+      <Header :header_data="headerData" />
+      <Content :homepage_data="homepageData" />
     </div>
   </div>
 </template>
@@ -18,12 +18,14 @@ export default {
   async asyncData ({ $prismic, error }) {
     try {
       const header = (await $prismic.api.getSingle('header')).data
-      console.log({ header })
+      const homepage = (await $prismic.api.getSingle('homepage')).data
+
       return {
-        header_data: header
+        headerData: header,
+        homepageData: homepage,
       }
     } catch (e) {
-      error({ statusCode: 404, message: 'Page not found' })
+      return error({ statusCode: 404, message: 'Page not found' })
     }
   }
 }

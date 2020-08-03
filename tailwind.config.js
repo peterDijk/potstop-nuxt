@@ -20,8 +20,8 @@ module.exports = {
       '6xl': '4rem',
       '7xl': '5rem',
       '8xl': '6rem',
-      '9xl': '7rem'
-    }
+      '9xl': '7rem',
+    },
   },
   variants: {},
   plugins: [],
@@ -33,7 +33,7 @@ module.exports = {
       'layouts/**/*.vue',
       'pages/**/*.vue',
       'plugins/**/*.js',
-      'nuxt.config.js'
-    ]
-  }
-}
+      'nuxt.config.js',
+    ],
+  },
+};
