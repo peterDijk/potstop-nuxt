@@ -9,7 +9,7 @@ export default {
   props: {
     homepageData: {
       type: Object,
-      required: true,
+      required: true
     }
   }
 }
