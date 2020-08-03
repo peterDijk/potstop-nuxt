@@ -50,6 +50,11 @@ export default {
     // Doc: https://github.com/nuxt-community/nuxt-tailwindcss
     '@nuxtjs/tailwindcss',
   ],
+  tailwindcss: {
+    configPath: '~/tailwind.config.js',
+    cssPath: '~/assets/styles/tailwind.css',
+    exposeConfig: false,
+  },
   /*
    ** Nuxt.js modules
    */
@@ -58,7 +63,13 @@ export default {
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
     '@nuxtjs/prismic',
+    'nuxt-webfontloader',
   ],
+  webfontloader: {
+    google: {
+      families: ['Lato:400,700', 'Quicksand:400,700'], // Loads Lato font with weights 400 and 700
+    },
+  },
   // This is where you configure your settings for the new plugin
   prismic: {
     endpoint: 'https://potstop.cdn.prismic.io/api/v2',
@@ -75,6 +86,16 @@ export default {
    ** See https://nuxtjs.org/api/configuration-build/
    */
   build: {
+    // postcss: {
+    //   plugins: {
+    //     'postcss-import': {},
+    //     tailwindcss: path.resolve(__dirname, './tailwind.config.js'),
+    //     'postcss-nested': {},
+    //   },
+    // },
+    // preset: {
+    //   stage: 1, // see https://tailwindcss.com/docs/using-with-preprocessors#future-css-featuress
+    // },
     transpile: ['qrcode-generator-es6'],
   },
 };
