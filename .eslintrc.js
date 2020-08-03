@@ -1,9 +1,5 @@
 module.exports = {
   root: true,
-  parser: 'vue-eslint-parser',
-  parserOptions: {
-    parser: '@typescript-eslint/parser',
-  },
   env: {
     browser: true,
     node: true,
@@ -11,13 +7,10 @@ module.exports = {
 
   extends: [
     '@nuxtjs/eslint-config-typescript',
-    // 'plugin:@typescript-eslint/recommended',
-    'prettier',
-    // 'plugin:prettier/recommended',
-    'prettier/vue',
     'plugin:nuxt/recommended',
+    'eslint-config-prettier',
   ],
-  plugins: ['prettier', 'vue'],
+  plugins: ['vue'], // vue
   // add your custom rules here
   rules: {
     // 'vue/v-bind-style': ['longform'],
