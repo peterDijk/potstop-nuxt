@@ -11,7 +11,7 @@ module.exports = {
 
   extends: [
     '@nuxtjs/eslint-config-typescript',
-    'plugin:@typescript-eslint/recommended',
+    // 'plugin:@typescript-eslint/recommended',
     'prettier',
     // 'plugin:prettier/recommended',
     'prettier/vue',
@@ -33,5 +33,6 @@ module.exports = {
         math: 'always',
       },
     ],
+    'vue/attribute-hyphenation': 'off',
   },
 };

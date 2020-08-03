@@ -1,16 +1,8 @@
 <template>
-  <div class="w-screen h-screen bg-white overflow-hidden absolute">
-    <img
-      :src="headerData['header-image'].url"
-      class="object-cover h-full w-full absolute"
-    />
-    <div
-      class="container mx-auto h-full relative flex-row justify-center overflow-scroll"
-    >
-      <Header :header_data="headerData" />
-      <Content :homepage_data="homepageData" />
-    </div>
-  </div>
+    <ContainerBgImage :headerData="headerData">
+      <Header :headerData="headerData" />
+      <Content :homepageData="homepageData" />
+    </ContainerBgImage>
 </template>
 
 <script lang="ts">
@@ -34,17 +26,20 @@ export default {
 <style>
 @tailwind base;
 
+h1 {
+  @apply text-2xl;
+}
+h2 {
+  @apply text-xl;
+}
+h3 {
+  @apply text-lg;
+}
+a {
+  @apply text-blue-600;
+}
+
 @tailwind components;
 
 @tailwind utilities;
-
-.title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
 </style>

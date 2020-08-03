@@ -6,6 +6,19 @@
  */
 module.exports = {
   theme: {
+    fontFamily: {
+      sans: [
+        'Quicksand',
+        'Source Sans Pro',
+        '-apple-system',
+        'BlinkMacSystemFont',
+        'Segoe UI',
+        'Roboto',
+        'Helvetica Neue',
+        'Arial',
+        'sans-serif',
+      ],
+    },
     fontSize: {
       xs: '.75rem',
       sm: '.875rem',
