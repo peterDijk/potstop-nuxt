@@ -17,7 +17,7 @@
 
 <script lang="ts">
 export default {
-  props: ['header_data'],
+  props: ['header_data']
   // async asyncData ({ $prismic, error }) {
   //   try {
   //     const header = (await $prismic.api.getSingle('header')).data
@@ -29,7 +29,7 @@ export default {
   //     error({ statusCode: 404, message: 'Page not found' })
   //   }
   // }
-};
+}
 </script>
 
 <style scoped>

@@ -1,34 +1,32 @@
 <template>
-  <div class="relative">
-    <div class="w-screen h-screen bg-white overflow-hidden absolute">
-      <img
-        :src="header_data['header-image'].url"
-        class="object-cover h-full w-full absolute"
-      />
-      <div
-        class="container mx-auto h-full relative flex-row justify-center overflow-scroll"
-      >
-        <Header :header_data="header_data" />
-        <Content />
-      </div>
+  <div class="w-screen h-screen bg-white overflow-hidden absolute">
+    <img
+      :src="header_data['header-image'].url"
+      class="object-cover h-full w-full absolute"
+    />
+    <div
+      class="container mx-auto h-full relative flex-row justify-center overflow-scroll"
+    >
+      <Header :header_data="header_data" />
+      <Content />
     </div>
   </div>
 </template>
 
 <script lang="ts">
 export default {
-  async asyncData({ $prismic, error }) {
+  async asyncData ({ $prismic, error }) {
     try {
-      const header = (await $prismic.api.getSingle('header')).data;
-      console.log({ header });
+      const header = (await $prismic.api.getSingle('header')).data
+      console.log({ header })
       return {
-        header_data: header,
-      };
+        header_data: header
+      }
     } catch (e) {
-      error({ statusCode: 404, message: 'Page not found' });
+      error({ statusCode: 404, message: 'Page not found' })
     }
-  },
-};
+  }
+}
 </script>
 
 <style>
