@@ -1,14 +1,16 @@
 <template>
-  <div>
-    <div>
-      <!-- <Logo /> -->
-      <Header :header_data="header_data" />
+  <div class="relative">
+    <div class="w-screen h-screen bg-white overflow-hidden absolute">
+      <img
+        :src="header_data['header-image'].url"
+        class="object-cover h-full w-full absolute"
+      />
       <div
-        class="container mx-auto relative flex justify-center overflow-scroll"
+        class="container mx-auto h-full relative flex-row justify-center overflow-scroll"
       >
-        <!-- Contenttt -->
+        <Header :header_data="header_data" />
+        <Content />
       </div>
-      <!-- <TestTailwind /> -->
     </div>
   </div>
 </template>
