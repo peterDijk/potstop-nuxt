@@ -9,18 +9,16 @@
         class="container mx-auto h-full relative flex-row justify-center overflow-scroll"
       >
         <div id="header-text" class="p-6 pt-64">
-          <!-- bg-green-600 -->
-          <!-- bg-red-500 sm:bg-green-500 md:bg-blue-500 lg:bg-pink-500 xl:bg-teal-500 -->
-          <h1
-            class="text-xl sm:text-1xl md:text-2xl lg:text-3xl xl:text-4xl tracking-widest bg-white pl-6 p-3 inline"
-          >
-            {{ header_data['header-title'][0].text }}
-          </h1>
           <div class="">
             <h1
               class="NuxtLogo tracking-widest pl-1 sm:pl-5 md:pl-16 lg:pl-32 xl:pl-32 text-6xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-9xl text-green-600"
             >
               potstop
+            </h1>
+            <h1
+              class="text-xl sm:text-1xl md:text-2xl lg:text-3xl xl:text-4xl tracking-widest text-white pl-6 p-3 inline"
+            >
+              {{ header_data['header-title'][0].text }}
             </h1>
           </div>
         </div>
