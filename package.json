@@ -30,13 +30,13 @@
     "nuxt": "^2.14.6",
     "nuxt-webfontloader": "^1.1.0",
     "@nuxt/typescript-build": "^2.0.3",
-    "@nuxtjs/stylelint-module": "^4.0.0"
+    "@nuxtjs/stylelint-module": "^4.0.0",
+    "@nuxtjs/tailwindcss": "^2.1.1"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^3.1.0",
     "@nuxtjs/eslint-config-typescript": "^2.0.0",
     "@nuxtjs/eslint-module": "^2.0.0",
-    "@nuxtjs/tailwindcss": "^2.1.1",
     "@vue/test-utils": "^1.1.0",
     "babel-core": "7.0.0-bridge.0",
     "babel-eslint": "^10.1.0",
@@ -56,7 +56,6 @@
     "stylelint": "^13.7.2",
     "stylelint-config-prettier": "^8.0.1",
     "stylelint-config-standard": "^20.0.0",
-    "tailwindcss": "^1.8.12",
     "ts-jest": "^26.4.1",
     "vue-jest": "^3.0.7"
   }
