@@ -1,5 +1,7 @@
 # potstop
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/f279db5d-ac1c-4682-a09a-858f90007e49/deploy-status)](https://app.netlify.com/sites/potstop/deploys)
+
 ## Build Setup
 
 ```bash
