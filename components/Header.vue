@@ -4,7 +4,7 @@
     <div class="p-6 pt-64">
       <div class="">
         <h1
-          class="NuxtLogo tracking-widest pl-1 sm:pl-5 md:pl-16 lg:pl-32 xl:pl-32 text-6xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-9xl text-green-600"
+          class="NuxtLogo tracking-widest pl-1 sm:pl-5 md:pl-16 lg:pl-32 xl:pl-32 text-6xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-9xl text-green-600 text-right"
         >
           {{ headerData['header-main-title'][0].text }}
         </h1>
