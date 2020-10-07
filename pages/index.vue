@@ -16,8 +16,6 @@ export default {
       const homepage = (await $prismic.api.getSingle('homepage')).data
       const seo = (await $prismic.api.getSingle('seo')).data
 
-      console.log({ title: seo.title[0].text })
-
       return {
         headerData: header,
         homepageData: homepage,
