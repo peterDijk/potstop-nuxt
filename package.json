@@ -28,10 +28,10 @@
     "@nuxtjs/prismic": "^1.2.4",
     "@nuxtjs/pwa": "^3.1.2",
     "nuxt": "^2.14.6",
-    "nuxt-webfontloader": "^1.1.0"
+    "nuxt-webfontloader": "^1.1.0",
+    "@nuxt/typescript-build": "^2.0.3"
   },
   "devDependencies": {
-    "@nuxt/typescript-build": "^1.0.3",
     "@nuxtjs/eslint-config": "^3.1.0",
     "@nuxtjs/eslint-config-typescript": "^2.0.0",
     "@nuxtjs/eslint-module": "^2.0.0",
