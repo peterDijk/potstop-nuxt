@@ -11,7 +11,7 @@
         <h1
           class="text-xl sm:text-1xl md:text-2xl lg:text-3xl xl:text-4xl tracking-widest text-white pl-6 p-3 inline"
         >
-          {{headerData['header-title'][0].text }}
+          {{headerData['title'][0].text }}
         </h1>
       </div>
     </div>
