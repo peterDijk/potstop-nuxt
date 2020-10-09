@@ -1,15 +1,15 @@
 <template>
   <div id="header-text">
-    <div class="pt-48" />
-    <div class="p-6 pt-64">
-      <div class="">
+    <div class="pt-24" />
+    <div class="pl-6 pr-6 pt-4">
+      <div class="flex-row">
         <h1
-          class="NuxtLogo tracking-widest pl-1 sm:pl-5 md:pl-16 lg:pl-32 xl:pl-32 text-6xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-9xl text-green-600 text-right"
+          class="NuxtLogo tracking-widest pl-1 sm:pl-5 md:pl-16 lg:pl-32 xl:pl-32 text-6xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-9xl text-green-600 text-left"
         >
           {{ headerData['header-main-title'][0].text }}
         </h1>
         <h1
-          class="text-xl sm:text-1xl md:text-2xl lg:text-3xl xl:text-4xl tracking-widest text-white pl-6 p-3 inline"
+          class="text-xl sm:text-1xl md:text-2xl lg:text-3xl xl:text-4xl text-white pl-6 p-3 text-right w-full"
         >
           {{headerData['title'][0].text }}
         </h1>
