@@ -1,12 +1,13 @@
 <template>
   <div id="header-text">
-    <no-ssr placeholder="loading...">
-      <!-- <Slide> -->
-      <a id="home" href="#">
-        <span>Home</span>
+    <Slide>
+      <a id="home" href="/">
+        <span>home</span>
       </a>
-      <!-- </Slide> -->
-    </no-ssr>
+      <a id="about" href="/about">
+        <span>over potstop</span>
+      </a>
+    </Slide>
     <div class="pt-24" />
     <div class="pl-6 pr-6 pt-4">
       <div class="flex-row">
@@ -36,7 +37,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
 .NuxtLogo {
   animation: 1s appear;
   margin: auto;
@@ -45,5 +46,11 @@ export default {
   0% {
     opacity: 0;
   }
+}
+.bm-menu {
+  background-color: transparent;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 </style>
