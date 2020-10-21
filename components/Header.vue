@@ -1,5 +1,12 @@
 <template>
   <div id="header-text">
+    <no-ssr placeholder="loading...">
+      <!-- <Slide> -->
+      <a id="home" href="#">
+        <span>Home</span>
+      </a>
+      <!-- </Slide> -->
+    </no-ssr>
     <div class="pt-24" />
     <div class="pl-6 pr-6 pt-4">
       <div class="flex-row">
