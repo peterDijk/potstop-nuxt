@@ -2,8 +2,8 @@
   <div>
     <Seo :seoData="seoData" />
     <ContainerBgImage :headerData="headerData">
-      <Header :headerData="headerData" />
-      <Content :data="homepageData" />
+      <Header :headerData="{...headerData, title: aboutData.title}" />
+      <Content :data="aboutData" />
     </ContainerBgImage>
   </div>
 </template>
@@ -13,14 +13,12 @@ export default {
   async asyncData ({ $prismic, error }) {
     try {
       const header = (await $prismic.api.getSingle('header')).data
-      const homepage = (await $prismic.api.getSingle('homepage')).data
+      const about = (await $prismic.api.getSingle('about')).data
       const seo = (await $prismic.api.getSingle('seo')).data
 
-      console.log({ header, homepage, seo });
-      
       return {
         headerData: header,
-        homepageData: homepage,
+        aboutData: about,
         seoData: seo,
       }
     } catch (e) {
