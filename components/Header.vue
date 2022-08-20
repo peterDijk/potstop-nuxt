@@ -1,13 +1,12 @@
 <template>
   <div id="header-text">
     <div class="pt-48" />
-    <div class="p-6 pt-64">
+    <div class="p-4 pt-2">
       <div class="">
-        <h1
-          class="NuxtLogo tracking-widest pl-1 sm:pl-5 md:pl-16 lg:pl-32 xl:pl-32 text-6xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-9xl text-green-600 text-right"
-        >
-          {{ headerData['header-main-title'][0].text }}
-        </h1>
+        <img 
+          :src="headerData['logo_image'].url"
+          class="pl-6 p-3 inline object-scale-down"
+        />
         <h1
           class="text-xl sm:text-1xl md:text-2xl lg:text-3xl xl:text-4xl tracking-widest text-white pl-6 p-3 inline"
         >
