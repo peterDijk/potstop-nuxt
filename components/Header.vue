@@ -5,7 +5,7 @@
       <div class="">
         <img 
           :src="headerData['logo_image'].url"
-          class="pl-6 p-3 inline"
+          class="pl-6 p-3 inline object-scale-down"
         />
         <h1
           class="text-xl sm:text-1xl md:text-2xl lg:text-3xl xl:text-4xl tracking-widest text-white pl-6 p-3 inline"
