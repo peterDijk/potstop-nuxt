@@ -49,6 +49,7 @@ export default {
     '@nuxtjs/stylelint-module',
     // Doc: https://github.com/nuxt-community/nuxt-tailwindcss
     '@nuxtjs/tailwindcss',
+    '@nuxtjs/prismic',
   ],
   tailwindcss: {
     configPath: '~/tailwind.config.js',
@@ -62,7 +63,6 @@ export default {
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
-    '@nuxtjs/prismic',
     'nuxt-webfontloader',
   ],
   webfontloader: {
@@ -72,7 +72,8 @@ export default {
   },
   // This is where you configure your settings for the new plugin
   prismic: {
-    endpoint: 'https://potstop.cdn.prismic.io/api/v2',
+    endpoint: 'https://potstop.prismic.io/api/v2',
+    modern: true,
     linkResolver: '@/plugins/link-resolver',
     htmlSerializer: '@/plugins/html-serializer',
   },
