@@ -34,7 +34,7 @@ export default {
    ** Plugins to load before mounting the App
    ** https://nuxtjs.org/guide/plugins
    */
-  plugins: [],
+  plugins: [{ src: '~/plugins/slide-menu.js', ssr: false }],
   /*
    ** Auto import components
    ** See https://nuxtjs.org/api/configuration-components
@@ -98,5 +98,6 @@ export default {
     //   stage: 1, // see https://tailwindcss.com/docs/using-with-preprocessors#future-css-featuress
     // },
     transpile: ['qrcode-generator-es6'],
+    vendor: ['vue-burger-menu'],
   },
 };

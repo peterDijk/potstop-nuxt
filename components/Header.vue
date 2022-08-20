@@ -1,14 +1,22 @@
 <template>
   <div id="header-text">
+    <Slide>
+      <a id="home" href="/">
+        <span>home</span>
+      </a>
+      <a id="about" href="/about">
+        <span>over potstop</span>
+      </a>
+    </Slide>
     <div class="pt-48" />
     <div class="p-4 pt-2">
-      <div class="">
+      <div class="flex-row">
         <img 
           :src="headerData['logo_image'].url"
           class="pl-6 p-3 inline object-scale-down"
         />
         <h1
-          class="text-xl sm:text-1xl md:text-2xl lg:text-3xl xl:text-4xl tracking-widest text-white pl-6 p-3 inline"
+          class="text-xl sm:text-1xl md:text-2xl lg:text-3xl xl:text-4xl text-white pl-6 p-3 text-right w-full"
         >
           {{headerData['title'][0].text }}
         </h1>
@@ -28,7 +36,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
 .NuxtLogo {
   animation: 1s appear;
   margin: auto;
@@ -37,5 +45,11 @@ export default {
   0% {
     opacity: 0;
   }
+}
+.bm-menu {
+  background-color: transparent;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 </style>
